@@ -26,8 +26,8 @@ Its a device responsive built completly with html and css.
 
 ### Links
 
-- Code File URL: [github.com](https://github.com/Jyotimoykathar/Project-02)
-- Live Site URL: [netlify.app](https://project-02-restaurant.netlify.app/)
+- Code File URL: [github.com](https://github.com/Jyotimoykathar/project-11)
+- Live Site URL: [netlify.app](https://project-11-hosting-website.netlify.app/)
 
 ## My process
 
