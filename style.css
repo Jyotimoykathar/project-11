@@ -1,0 +1,499 @@
+/* General style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  /* 10px/16px = 0.625 */
+}
+
+body {
+  font-family: "rubik", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* Resuable components */
+.container {
+  max-width: 160rem;
+  padding: 0 3.6rem;
+  margin: 0 auto;
+}
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3.2rem;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+}
+
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+  align-items: start;
+}
+.grid--center-u {
+  align-items: center;
+}
+.center {
+  text-align: center;
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1rem 3.2rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.3s;
+  border-radius: 9px;
+}
+.btn-white {
+  background: transparent;
+  color: #66c5ff;
+  border: 1px solid #66c5ff;
+}
+.btn-color {
+  background-image: linear-gradient(to right bottom, #66c5ff, #0568eb);
+  color: #fff;
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-weight: 700;
+  color: #333;
+  letter-spacing: -0.5px;
+}
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+.heading-secondary {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+.heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.05;
+  margin: 1.6rem 0;
+}
+.sub-heading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.75px;
+}
+.description {
+  font-size: 2rem;
+  line-height: 1.6;
+  padding-right: 4.8rem;
+  margin-bottom: 4.8rem;
+}
+.color-white {
+  color: #fff;
+}
+.margin-large {
+  margin: 12.8rem auto;
+}
+/* ****************** */
+/* HEADER SECTION */
+/* ****************** */
+.header-section {
+  margin-top: 2.5rem;
+  position: relative;
+}
+/* ****************** */
+/* NAVIGATION SECTION */
+/* ****************** */
+
+.main-nav {
+  list-style: none;
+  grid-column: 2/4;
+  justify-self: end;
+}
+.list-item {
+  font-weight: 600;
+  font-size: 2rem;
+  text-decoration: none;
+  color: #888;
+}
+.list-item:hover {
+  color: #333;
+}
+.btn-mobile-nav {
+  position: absolute;
+  top: 0;
+  right: 3.6rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+.menu-icon {
+  height: 5.2rem;
+  width: 5.2rem;
+  color: #333;
+}
+
+/* ****************** */
+/* HOSTING SECTION */
+/* ****************** */
+.right-image img {
+  width: 100%;
+}
+.left-image img {
+  width: 100%;
+}
+
+/* ****************** */
+/* SERVICE SECTION */
+/* ****************** */
+.card img {
+  width: 6.2rem;
+}
+/* ****************** */
+/* CARD SECTION */
+/* ****************** */
+.card-section {
+  background-image: linear-gradient(to right bottom, #08c3f8, #0562ea);
+  padding: 9.5rem;
+}
+.card {
+  background: #fff;
+  border-radius: 9px;
+  border: none;
+}
+.card-padding {
+  padding: 1.5rem 2.5rem;
+}
+.card-head.popular {
+  background-color: #353535;
+  border-radius: 9px;
+  border: none;
+}
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  line-height: 1.2;
+}
+
+.list-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #16d8a6;
+  border: 1px solid #16d8a6;
+  border-radius: 50px;
+  padding: 0.3rem;
+}
+.card-footer {
+  color: #777;
+  /* font-size: 2.4rem; */
+  font-weight: 600;
+}
+.card-footer span {
+  font-weight: 600;
+  color: #777;
+}
+.margin-small {
+  margin-bottom: 6.4rem;
+}
+/* ****************** */
+/* CUSTOMER SECTION */
+/* ****************** */
+.customer-section {
+  margin: 9.6rem auto;
+}
+.review-item {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  padding: 3.2rem 4.8rem;
+  border: 0.5px solid #777;
+  border-radius: 9px;
+  margin-bottom: 2rem;
+}
+.circle img {
+  width: 7.4rem;
+}
+.customer-section .description.top {
+  padding: 1rem 12.8rem;
+  margin: 3.2rem 9rem;
+}
+/* ****************** */
+/* CTA SECTION */
+/* ****************** */
+.cta-section {
+  background-image: url("resources/cta.svg");
+  padding: 9.6rem 3.2rem;
+}
+.cta-section .btn {
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 1.6rem 3.2rem;
+  background: transparent;
+}
+
+/* ****************** */
+/* FOOTER SECTION */
+/* ****************** */
+.footer-section {
+  padding: 6.4rem 2.5rem;
+}
+.footer-section .heading-tertiary {
+  font-weight: 500;
+  font-size: 2.4rem;
+}
+
+.footer-logo {
+  width: 10rem;
+}
+
+.footer-section .list {
+  color: #d6d6d6;
+  font-size: 2.4rem;
+}
+.social-icons {
+  width: 3rem;
+}
+.footer-description {
+  font-size: 1.6rem;
+}
+.flex-row-footer {
+  display: flex;
+  align-items: start;
+  gap: 1.2rem;
+}
+
+/* Media queries */
+/**************************/
+/* BELOW 1344px (Smaller Desktop) */
+/**************************/
+@media (max-width: 84em) {
+  .main-nav.flex-row {
+    gap: 1.4rem;
+  }
+  [alt="Logo image"] {
+    width: 15rem;
+  }
+  .list-item {
+    font-size: 1.6rem;
+  }
+  .btn.btn-white {
+    background: transparent;
+    color: #66c5ff;
+    border: 1px solid #66c5ff;
+    font-size: 1.6rem;
+    padding: 1rem 2.8rem;
+  }
+}
+
+/**************************/
+/* BELOW 1200px (Landscape Tablets) */
+/**************************/
+
+@media (max-width: 75em) {
+  html {
+    /* 9px / 16px  */
+    font-size: 56.25%;
+  }
+  [alt="Logo image"] {
+    width: 15rem;
+  }
+  .grid {
+    column-gap: 4.8rem;
+  }
+  .grid--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 4.4rem;
+  }
+
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
+
+  .main-nav.flex-row {
+    gap: 1.6rem;
+  }
+  .btn,
+  .btn:link,
+  .btn:visited {
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1rem 3.2rem;
+  }
+  .btn.btn-white {
+    background: transparent;
+    color: #66c5ff;
+    border: 1px solid #66c5ff;
+    font-size: 1.6rem;
+    padding: 1rem 2.4rem;
+  }
+  .card-section {
+    padding: 9.5rem 2rem;
+  }
+}
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+  html {
+    /* 8px / 16px = 0.5 = 50% */
+    font-size: 50%;
+  }
+
+  .nav img {
+    height: 5.2rem;
+  }
+
+  .btn--form {
+    margin-top: 1.2rem;
+  }
+  .heading-primary {
+    font-size: 4.6rem;
+    line-height: 1;
+    margin-bottom: 3.2rem;
+  }
+  .description {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+
+  /* MOBILE NAVIGATION */
+  .btn-mobile-nav {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+  }
+  .card-section {
+    padding: 9.5rem 0;
+  }
+}
+
+/* ***************************** */
+/* BELOW 704PX(Smaller Tablets) */
+/* ***************************** */
+/* 704/16 = 44 */
+@media (max-width: 44em) {
+  .grid--3-cols {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    justify-content: center;
+  }
+  .grid--5-cols {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.2rem;
+    align-items: start;
+  }
+  .card {
+    margin-bottom: 2rem;
+  }
+  .card {
+    margin-bottom: 2rem;
+  }
+  .review-item {
+    margin-bottom: 2rem;
+  }
+  .footer-section {
+    padding: 4.2rem 2.5rem;
+  }
+  .footer-section .flex-col {
+    margin-bottom: 2rem;
+    padding: 2rem 4rem;
+    gap: 2.4rem;
+  }
+}
+
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+
+@media (max-width: 34em) {
+  .grid {
+    row-gap: 4.8rem;
+  }
+
+  .grid--2-cols,
+  .grid--3-cols,
+  .grid--5-cols {
+    grid-template-columns: 1fr;
+  }
+  .grid--5-cols {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 1.6rem 1.6rem;
+  }
+
+  .description {
+    line-height: 1.2;
+    font-size: 1.8rem;
+    margin-bottom: 4.8rem;
+  }
+  .customer-section .description.top {
+    margin: 3.2rem 6.4rem;
+    text-align: left;
+    padding: 0 0.8rem;
+  }
+
+  .left-image,
+  .right-image {
+    width: 80%;
+  }
+
+  .nav img {
+    height: 4.4rem;
+  }
+}
